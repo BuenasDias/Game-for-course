@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_mainFragment_to_gameFragment"
             app:destination="@id/gameFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_ladderFragment"
+            app:destination="@id/ladderFragment" />
     </fragment>
     <fragment
         android:id="@+id/gameFragment"
@@ -21,6 +24,15 @@
         tools:layout="@layout/fragment_game" >
         <action
             android:id="@+id/action_gameFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/ladderFragment"
+        android:name="com.max.interview.gameforcourse.LadderFragment"
+        android:label="fragment_ladder"
+        tools:layout="@layout/fragment_ladder" >
+        <action
+            android:id="@+id/action_ladderFragment_to_mainFragment"
             app:destination="@id/mainFragment" />
     </fragment>
 </navigation>

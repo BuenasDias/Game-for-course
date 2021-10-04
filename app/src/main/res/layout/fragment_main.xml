@@ -1,24 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="8dp"
-    android:background="@drawable/bgnature"
+    android:background="@drawable/bg_fragment_1"
+    android:padding="@dimen/main_padding"
     tools:context=".MainFragment">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:textColor="@color/white"
-        android:layout_height="match_parent"
-        android:text="Fragment 1" />
-
     <Button
-        android:id="@+id/btn_nav_second"
+        android:id="@+id/btn_go_game"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="go_game_fragment"
-        android:layout_marginTop="25dp"
-        android:text="go game" />
+        android:text="go game"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <Button
+        android:id="@+id/btn_go_ladder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="go ladder"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_go_game" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

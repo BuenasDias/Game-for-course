@@ -66,7 +66,7 @@ public class MainFragment extends Fragment {
 //                                .setPopExitAnim(android.R.anim.fade_out)
 //                                .build()));
 
-//        // Вариант со стандартными анимациями скрытия и показа
+////         Вариант со стандартными анимациями скрытия и показа
 //        binding.btnGoGame.setOnClickListener(v ->
 //                navController.navigate(R.id.action_mainFragment_to_gameFragment,
 //                        null,
@@ -87,7 +87,6 @@ public class MainFragment extends Fragment {
 //                                .setPopExitAnim(android.R.anim.slide_out_right)
 //                                .build()));
 
-        // Вариант с картомными анимациями скрытия и показа
         binding.btnGoGame.setOnClickListener(v ->
                 navController.navigate(R.id.action_mainFragment_to_gameFragment,
                         null,

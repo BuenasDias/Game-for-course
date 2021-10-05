@@ -26,15 +26,6 @@ public class GameFragment extends Fragment {
     private NavHostFragment navHostFragment;
     private NavController navController;
 
-
-    @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-
-    }
-
-
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -46,7 +37,6 @@ public class GameFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         initView();
     }
-
 
     private void initView() {
         navHostFragment = (NavHostFragment) requireActivity().getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
@@ -67,24 +57,27 @@ public class GameFragment extends Fragment {
 //                                .setPopExitAnim(android.R.anim.fade_out)
 //                                .build()));
 
-        // Вариант со стандартными анимациями выезда слева заезд справа
-        binding.btnGoMain.setOnClickListener(v ->
-                navController.navigate(R.id.action_gameFragment_to_mainFragment,
-                        null,
-                        new NavOptions.Builder()
-                                .setEnterAnim(android.R.anim.slide_in_left)
-                                .setExitAnim(android.R.anim.slide_out_right)
-                                .setPopEnterAnim(android.R.anim.slide_in_left)
-                                .setPopExitAnim(android.R.anim.slide_out_right)
-                                .build()));
-
+//        // Вариант со стандартными анимациями выезда слева заезд справа
 //        binding.btnGoMain.setOnClickListener(v ->
 //                navController.navigate(R.id.action_gameFragment_to_mainFragment,
 //                        null,
 //                        new NavOptions.Builder()
-//                                .setEnterAnim(R.anim.anim_show)
-//                                .setExitAnim(R.anim.anim_hide)
-//                                .build())
-//        );
+//                                .setEnterAnim(android.R.anim.slide_in_left)
+//                                .setExitAnim(android.R.anim.slide_out_right)
+//                                .setPopEnterAnim(android.R.anim.slide_in_left)
+//                                .setPopExitAnim(android.R.anim.slide_out_right)
+//                                .build()));
+
+        // Вариант c кастомынми анимациями
+        binding.btnGoMain.setOnClickListener(v ->
+                navController.navigate(R.id.action_gameFragment_to_mainFragment,
+                        null,
+                        new NavOptions.Builder()
+                                .setEnterAnim(R.anim.anim_show)
+                                .setExitAnim(R.anim.anim_hide)
+                                .setPopEnterAnim(R.anim.anim_show)
+                                .setPopExitAnim(R.anim.anim_hide)
+                                .build())
+        );
     }
 }

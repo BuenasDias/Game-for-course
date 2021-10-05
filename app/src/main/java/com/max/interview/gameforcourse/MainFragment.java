@@ -66,41 +66,46 @@ public class MainFragment extends Fragment {
 //                                .setPopExitAnim(android.R.anim.fade_out)
 //                                .build()));
 
-        // Вариант со стандартными анимациями скрытия и показа
-        binding.btnGoGame.setOnClickListener(v ->
-                navController.navigate(R.id.action_mainFragment_to_gameFragment,
-                        null,
-                        new NavOptions.Builder()
-                                .setEnterAnim(android.R.anim.slide_in_left)
-                                .setExitAnim(android.R.anim.slide_out_right)
-                                .setPopEnterAnim(android.R.anim.slide_in_left)
-                                .setPopExitAnim(android.R.anim.slide_out_right)
-                                .build()));
-
-        binding.btnGoLadder.setOnClickListener(v ->
-                navController.navigate(R.id.action_mainFragment_to_gameFragment,
-                        null,
-                        new NavOptions.Builder()
-                                .setEnterAnim(android.R.anim.slide_in_left)
-                                .setExitAnim(android.R.anim.slide_out_right)
-                                .setPopEnterAnim(android.R.anim.slide_in_left)
-                                .setPopExitAnim(android.R.anim.slide_out_right)
-                                .build()));
-
+//        // Вариант со стандартными анимациями скрытия и показа
 //        binding.btnGoGame.setOnClickListener(v ->
 //                navController.navigate(R.id.action_mainFragment_to_gameFragment,
 //                        null,
 //                        new NavOptions.Builder()
-//                                .setEnterAnim(R.anim.anim_show)
-//                                .setExitAnim(R.anim.anim_hide)
+//                                .setEnterAnim(android.R.anim.slide_in_left)
+//                                .setExitAnim(android.R.anim.slide_out_right)
+//                                .setPopEnterAnim(android.R.anim.slide_in_left)
+//                                .setPopExitAnim(android.R.anim.slide_out_right)
 //                                .build()));
 //
 //        binding.btnGoLadder.setOnClickListener(v ->
-//                navController.navigate(R.id.action_mainFragment_to_ladderFragment,
+//                navController.navigate(R.id.action_mainFragment_to_gameFragment,
 //                        null,
 //                        new NavOptions.Builder()
-//                                .setEnterAnim(R.anim.anim_show)
-//                                .setExitAnim(R.anim.anim_hide)
+//                                .setEnterAnim(android.R.anim.slide_in_left)
+//                                .setExitAnim(android.R.anim.slide_out_right)
+//                                .setPopEnterAnim(android.R.anim.slide_in_left)
+//                                .setPopExitAnim(android.R.anim.slide_out_right)
 //                                .build()));
+
+        // Вариант с картомными анимациями скрытия и показа
+        binding.btnGoGame.setOnClickListener(v ->
+                navController.navigate(R.id.action_mainFragment_to_gameFragment,
+                        null,
+                        new NavOptions.Builder()
+                                .setEnterAnim(R.anim.anim_show)
+                                .setExitAnim(R.anim.anim_hide)
+                                .setPopEnterAnim(R.anim.anim_show)
+                                .setPopExitAnim(R.anim.anim_hide)
+                                .build()));
+
+        binding.btnGoLadder.setOnClickListener(v ->
+                navController.navigate(R.id.action_mainFragment_to_ladderFragment,
+                        null,
+                        new NavOptions.Builder()
+                                .setEnterAnim(R.anim.anim_show)
+                                .setExitAnim(R.anim.anim_hide)
+                                .setPopEnterAnim(R.anim.anim_show)
+                                .setPopExitAnim(R.anim.anim_hide)
+                                .build()));
     }
 }

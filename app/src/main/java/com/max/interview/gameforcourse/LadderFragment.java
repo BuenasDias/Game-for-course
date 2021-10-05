@@ -24,7 +24,7 @@ public class LadderFragment extends Fragment {
     private NavController navController;
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         binding = FragmentLadderBinding.inflate(LayoutInflater.from(requireParentFragment().getContext()));
         return binding.getRoot();
@@ -54,15 +54,26 @@ public class LadderFragment extends Fragment {
 //                            .setPopExitAnim(android.R.anim.fade_out)
 //                            .build()));
 
-        // Вариант со стандартными анимациями выезда слева заезд справа
+//        // Вариант со стандартными анимациями выезда слева заезд справа
+//        binding.btnGoMain.setOnClickListener(v ->
+//                navController.navigate(R.id.action_ladderFragment_to_mainFragment,
+//                        null,
+//                        new NavOptions.Builder()
+//                                .setEnterAnim(android.R.anim.slide_in_left)
+//                                .setExitAnim(android.R.anim.slide_out_right)
+//                                .setPopEnterAnim(android.R.anim.slide_in_left)
+//                                .setPopExitAnim(android.R.anim.slide_out_right)
+//                                .build()));
+
+        // Вариант с кастомными анимациями выезда слева заезд справа
         binding.btnGoMain.setOnClickListener(v ->
                 navController.navigate(R.id.action_ladderFragment_to_mainFragment,
                         null,
                         new NavOptions.Builder()
-                                .setEnterAnim(android.R.anim.slide_in_left)
-                                .setExitAnim(android.R.anim.slide_out_right)
-                                .setPopEnterAnim(android.R.anim.slide_in_left)
-                                .setPopExitAnim(android.R.anim.slide_out_right)
+                                .setEnterAnim(R.anim.anim_show)
+                                .setExitAnim(R.anim.anim_hide)
+                                .setPopEnterAnim(R.anim.anim_show)
+                                .setPopExitAnim(R.anim.anim_hide)
                                 .build()));
     }
 }

@@ -42,42 +42,16 @@ public class GameFragment extends Fragment {
         navHostFragment = (NavHostFragment) requireActivity().getSupportFragmentManager().findFragmentById(R.id.nav_host_fragment);
         navController = Objects.requireNonNull(navHostFragment).getNavController();
 
-//        //Без анимации
-//        binding.btnGoMain.setOnClickListener(v ->
-//                navController.navigate(R.id.action_gameFragment_to_mainFragment));
-
-//        // Вариант со стандартными анимациями скрытия и показа
+//        // Вариант c кастомынми анимациями
 //        binding.btnGoMain.setOnClickListener(v ->
 //                navController.navigate(R.id.action_gameFragment_to_mainFragment,
 //                        null,
 //                        new NavOptions.Builder()
-//                                .setEnterAnim(android.R.anim.fade_in)
-//                                .setExitAnim(android.R.anim.fade_out)
-//                                .setPopEnterAnim(android.R.anim.fade_in)
-//                                .setPopExitAnim(android.R.anim.fade_out)
-//                                .build()));
-
-//        // Вариант со стандартными анимациями выезда слева заезд справа
-//        binding.btnGoMain.setOnClickListener(v ->
-//                navController.navigate(R.id.action_gameFragment_to_mainFragment,
-//                        null,
-//                        new NavOptions.Builder()
-//                                .setEnterAnim(android.R.anim.slide_in_left)
-//                                .setExitAnim(android.R.anim.slide_out_right)
-//                                .setPopEnterAnim(android.R.anim.slide_in_left)
-//                                .setPopExitAnim(android.R.anim.slide_out_right)
-//                                .build()));
-
-        // Вариант c кастомынми анимациями
-        binding.btnGoMain.setOnClickListener(v ->
-                navController.navigate(R.id.action_gameFragment_to_mainFragment,
-                        null,
-                        new NavOptions.Builder()
-                                .setEnterAnim(R.anim.anim_show)
-                                .setExitAnim(R.anim.anim_hide)
-                                .setPopEnterAnim(R.anim.anim_show)
-                                .setPopExitAnim(R.anim.anim_hide)
-                                .build())
-        );
+//                                .setEnterAnim(R.anim.anim_show)
+//                                .setExitAnim(R.anim.anim_hide)
+//                                .setPopEnterAnim(R.anim.anim_show)
+//                                .setPopExitAnim(R.anim.anim_hide)
+//                                .build())
+//        );
     }
 }

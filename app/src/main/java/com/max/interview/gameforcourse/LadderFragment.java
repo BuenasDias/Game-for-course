@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.max.interview.gameforcourse.Utils.DialogSettingFragment;
 import com.max.interview.gameforcourse.databinding.FragmentLadderBinding;
 
 import java.util.Objects;

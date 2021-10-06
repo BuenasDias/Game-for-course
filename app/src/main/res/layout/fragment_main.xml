@@ -8,4 +8,12 @@
     android:padding="@dimen/main_padding"
     tools:context=".MainFragment">
 
+    <ImageView
+        android:id="@+id/btn_setting"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/btn_settings"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

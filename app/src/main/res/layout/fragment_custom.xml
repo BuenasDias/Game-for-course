@@ -18,11 +18,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="10dp"
+            android:fontFamily="@font/pomidorko_regular"
             android:gravity="center"
-            android:text="Hello world"
+            android:text="Настройки"
+            android:textStyle="bold"
             android:textColor="@color/black"
-            android:textSize="25dp"
-            android:textStyle="bold" />
+            android:textSize="30dp"
+            />
 
         <Button
             android:id="@+id/btn_start_game"
